@@ -39,6 +39,12 @@ export function AccountDrawer({ data = [], sx, ...other }) {
 
   const { value: open, onFalse: onClose, onTrue: onOpen } = useBoolean();
 
+  // Default menu items if data is empty
+  const menuItems = data.length > 0 ? data : [
+    { label: 'Profile', href: '#', icon: <Iconify icon="solar:user-id-bold" /> },
+    { label: 'Settings', href: '#', icon: <Iconify icon="solar:settings-bold" /> },
+  ];
+
   const renderAvatar = () => (
     <AnimateBorder
       sx={{ mb: 2, p: '6px', width: 96, height: 96, borderRadius: '50%' }}
@@ -65,9 +71,9 @@ export function AccountDrawer({ data = [], sx, ...other }) {
         }),
       ]}
     >
-      {data.map((option) => {
-        const rootLabel = pathname.includes('/dashboard') ? 'Home' : 'Dashboard';
-        const rootHref = pathname.includes('/dashboard') ? '/' : paths.dashboard.root;
+      {menuItems.map((option) => {
+        const rootLabel = pathname.includes('/') ? 'Home' : 'Dashboard';
+        const rootHref = pathname.includes('/') ? '/' : paths.dashboard.root;
 
         return (
           <MenuItem key={option.label}>

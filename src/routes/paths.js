@@ -1,8 +1,8 @@
 // ----------------------------------------------------------------------
 
 const ROOTS = {
-  AUTH: '/auth',
-  DASHBOARD: '/dashboard',
+  AUTH: '/signin',
+  DASHBOARD: '',
 };
 
 // ----------------------------------------------------------------------
@@ -10,13 +10,13 @@ const ROOTS = {
 export const paths = {
   // AUTH
   auth: {
-    signin: `${ROOTS.AUTH}/signin`,
+    signin: ROOTS.AUTH,
   },
   // DASHBOARD
   dashboard: {
-    root: ROOTS.DASHBOARD,
-    blank: `${ROOTS.DASHBOARD}/blank`,
-    overview: `${ROOTS.DASHBOARD}/overview`,
-    components: `${ROOTS.DASHBOARD}/components`,
+    root: '/',
+    blank: '/blank',
+    overview: '/overview',
+    components: '/components',
   },
 };

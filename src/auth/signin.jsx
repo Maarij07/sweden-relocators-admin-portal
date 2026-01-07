@@ -81,8 +81,14 @@ export async function setSession(accessToken) {
   try {
     if (accessToken) {
       sessionStorage.setItem(JWT_STORAGE_KEY, accessToken);
+      
+      // Also store in cookies for middleware access
+      document.cookie = `${JWT_STORAGE_KEY}=${accessToken}; path=/; max-age=86400`;
     } else {
       sessionStorage.removeItem(JWT_STORAGE_KEY);
+      
+      // Clear cookie on logout
+      document.cookie = `${JWT_STORAGE_KEY}=; path=/; max-age=0`;
     }
   } catch (error) {
     console.error('Error during set session:', error);
@@ -320,7 +326,7 @@ export function JwtSignInView() {
       // Temporarily skip authentication - just go to dashboard
       await signInWithPassword({ email: data.email, password: data.password });
       await checkUserSession?.();
-      router.push('/dashboard');
+      router.push('/');
     } catch (error) {
       console.error(error);
       const feedbackMessage = getErrorMessage(error);
