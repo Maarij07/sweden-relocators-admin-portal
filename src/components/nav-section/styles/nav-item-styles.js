@@ -17,7 +17,7 @@ export const navItemStyles = {
   },
   texts: { flex: '1 1 auto', display: 'inline-flex', flexDirection: 'column' },
   title: (theme) => ({
-    ...theme.mixins.maxLine({ line: 1 }),
+    ...theme.mixins.maxLine({ line: 2 }),
     flex: '1 1 auto',
   }),
   info: {
@@ -38,7 +38,7 @@ export const navItemStyles = {
   }),
   captionIcon: { width: 16, height: 16 },
   captionText: (theme) => ({
-    ...theme.mixins.maxLine({ line: 1 }),
+    ...theme.mixins.maxLine({ line: 2 }),
     ...theme.typography.caption,
   }),
   disabled: { opacity: 0.48, pointerEvents: 'none' },

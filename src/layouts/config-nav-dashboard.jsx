@@ -12,6 +12,72 @@ const ICONS = {
   blank: icon('ic-blank'),
   dashboard: icon('ic-dashboard'),
   components: icon('ic-menu-item'),
+  leads: icon('ic-kanban'),
+  clients: icon('ic-user'),
+  appointments: icon('ic-calendar'),
+  assessment: icon('ic-analytics'),
+  invoices: icon('ic-invoice'),
+  individual: icon('ic-user'),
+  company: icon('ic-folder'),
+  open: icon('ic-mail'),
+  closed: icon('ic-lock'),
+  shared: icon('ic-external'),
+  attach: icon('ic-booking'),
+  active: icon('ic-label'),
+  accounting: icon('ic-banking'),
+  swedenRelocators: icon('ic-course'),
+  lawyersPartners: icon('ic-chat'),
+  publicAuthorities: icon('ic-job'),
+  positive: icon('ic-label'),
+  negative: icon('ic-disabled'),
+  notSure: icon('ic-tour'),
+  drafts: icon('ic-file'),
+  deleted: icon('ic-lock'),
+  individualClient: icon('ic-user'),
+  companyClient: icon('ic-folder'),
+  partners: icon('ic-external'),
+  propertyRental: icon('ic-tour'),
+  serviceRequests: icon('ic-chat'),
+  subscription: icon('ic-ecommerce'),
+  cbiRbi: icon('ic-banking'),
+  globalVisa: icon('ic-file'),
+  otherInvoices: icon('ic-label'),
+  immigrationCenter: icon('ic-file'),
+  immigrationApps: icon('ic-file'),
+  immigrationGlobalVisas: icon('ic-file'),
+  immigrationEVisa: icon('ic-mail'),
+  immigrationFeeChart: icon('ic-banking'),
+  immigrationEmbassyFiles: icon('ic-folder'),
+  immigrationDeleted: icon('ic-lock'),
+  completed: icon('ic-analytics'),
+  relocationProperty: icon('ic-tour'),
+  relocationBusiness: icon('ic-job'),
+  businessList: icon('ic-product'),
+  businessAvailable: icon('ic-folder'),
+  businessInterest: icon('ic-chat'),
+  businessDeals: icon('ic-order'),
+  businessBookerProfiles: icon('ic-user'),
+  businessDeleted: icon('ic-disabled'),
+  shortRental: icon('ic-booking'),
+  longTermRentals: icon('ic-product'),
+  buySell: icon('ic-product'),
+  approveListings: icon('ic-analytics'),
+  mortgageApps: icon('ic-banking'),
+  deletedClosedNotApproved: icon('ic-disabled'),
+  mpsJobSeekers: icon('ic-user'),
+  mpsJobAnnouncements: icon('ic-job'),
+  mpsBulkOffers: icon('ic-order'),
+  mpsInterest: icon('ic-chat'),
+  mpsDeleted: icon('ic-disabled'),
+  employeesMgmt: icon('ic-user'),
+  employeesTasks: icon('ic-kanban'),
+  employeesReports: icon('ic-analytics'),
+  interns: icon('ic-course'),
+  former: icon('ic-disabled'),
+  partnersMgmt: icon('ic-external'),
+  industryProfessionals: icon('ic-job'),
+  serviceProviders: icon('ic-product'),
+  formerPartner: icon('ic-disabled'),
 };
 
 // ----------------------------------------------------------------------
@@ -24,9 +90,96 @@ export const navData = [
     subheader: 'Management',
     items: [
       { title: 'Dashboard', path: paths.dashboard.root, icon: ICONS.dashboard },
-      { title: 'Overview', path: paths.dashboard.overview, icon: ICONS.dashboard },
-      { title: 'Components', path: paths.dashboard.components, icon: ICONS.components },
-      { title: 'Blank Page', path: paths.dashboard.blank, icon: ICONS.blank },
+      {
+        title: 'Leads Center',
+        path: paths.dashboard.leadsCenter,
+        icon: ICONS.leads,
+        children: [
+          {
+            title: 'Individual Leads',
+            path: paths.dashboard.leadsIndividual,
+            icon: ICONS.individual,
+            children: [
+              { title: 'Open Leads', path: paths.dashboard.leadsIndividualOpen, icon: ICONS.open },
+              { title: 'Closed Leads', path: paths.dashboard.leadsIndividualClosed, icon: ICONS.closed },
+            ],
+          },
+          {
+            title: 'Company Leads',
+            path: paths.dashboard.leadsCompany,
+            icon: ICONS.company,
+            children: [
+              { title: 'Open Leads', path: paths.dashboard.leadsCompanyOpen, icon: ICONS.open },
+              { title: 'Closed Leads', path: paths.dashboard.leadsCompanyClosed, icon: ICONS.closed },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Client Management',
+        path: paths.dashboard.clients,
+        icon: ICONS.clients,
+        children: [
+          {
+            title: 'Individual Clients',
+            path: paths.dashboard.clientsIndividual,
+            icon: ICONS.individual,
+            children: [
+              { title: 'Shared with Partners', path: paths.dashboard.clientsIndividualShared, icon: ICONS.shared },
+              { title: 'Attach with Employers', path: paths.dashboard.clientsIndividualAttachEmployers, icon: ICONS.attach },
+              { title: 'Active Clients', path: paths.dashboard.clientsIndividualActive, icon: ICONS.active },
+            ],
+          },
+          {
+            title: 'Company Clients',
+            path: paths.dashboard.clientsCompany,
+            icon: ICONS.company,
+            children: [
+              { title: 'Shared with Partners', path: paths.dashboard.clientsCompanyShared, icon: ICONS.shared },
+              { title: 'Attach with Employees', path: paths.dashboard.clientsCompanyAttachEmployees, icon: ICONS.attach },
+              { title: 'Accounting Clients', path: paths.dashboard.clientsCompanyAccounting, icon: ICONS.accounting },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Appointment Management',
+        path: paths.dashboard.appointments,
+        icon: ICONS.appointments,
+        children: [
+          { title: 'Sweden Relocators', path: paths.dashboard.appointmentsSwedenRelocators, icon: ICONS.swedenRelocators },
+          { title: 'Lawyers-Partners', path: paths.dashboard.appointmentsLawyersPartners, icon: ICONS.lawyersPartners },
+          { title: 'Public Authorities', path: paths.dashboard.appointmentsPublicAuthorities, icon: ICONS.publicAuthorities },
+        ],
+      },
+      {
+        title: 'Assessment Center',
+        path: paths.dashboard.assessment,
+        icon: ICONS.assessment,
+        children: [
+          { title: 'Positive Assessments', path: paths.dashboard.assessmentPositive, icon: ICONS.positive },
+          { title: 'Negative', path: paths.dashboard.assessmentNegative, icon: ICONS.negative },
+          { title: 'Not Sure', path: paths.dashboard.assessmentNotSure, icon: ICONS.notSure },
+          { title: 'Drafts', path: paths.dashboard.assessmentDrafts, icon: ICONS.drafts },
+          { title: 'Deleted', path: paths.dashboard.assessmentDeleted, icon: ICONS.deleted },
+        ],
+      },
+      {
+        title: 'Invoice Management',
+        path: paths.dashboard.invoices,
+        icon: ICONS.invoices,
+        children: [
+          { title: 'Individual Client Invoices', path: paths.dashboard.invoicesIndividualClient, icon: ICONS.individualClient },
+          { title: 'Company Clients Invoices', path: paths.dashboard.invoicesCompanyClient, icon: ICONS.companyClient },
+          { title: 'Partners Invoices', path: paths.dashboard.invoicesPartners, icon: ICONS.partners },
+          { title: 'Property Rental Invoices', path: paths.dashboard.invoicesPropertyRental, icon: ICONS.propertyRental },
+          { title: 'Service Requests Invoices', path: paths.dashboard.invoicesServiceRequests, icon: ICONS.serviceRequests },
+          { title: 'Subscription Invoices', path: paths.dashboard.invoicesSubscription, icon: ICONS.subscription },
+          { title: 'CBI-RBI Invoices', path: paths.dashboard.invoicesCBIRBI, icon: ICONS.cbiRbi },
+          { title: 'Global Visa Invoices', path: paths.dashboard.invoicesGlobalVisa, icon: ICONS.globalVisa },
+          { title: 'Other Invoices', path: paths.dashboard.invoicesOther, icon: ICONS.otherInvoices },
+        ],
+      },
     ],
   },
   /**
@@ -35,7 +188,36 @@ export const navData = [
   {
     subheader: 'Immigration',
     items: [
-      { title: 'Immigration', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Global Visa Center',
+        path: paths.dashboard.immigrationGlobalVisaCenter,
+        icon: ICONS.immigrationCenter,
+        children: [
+          { title: 'Global Visas Applications', path: paths.dashboard.immigrationGvcGlobalVisasApplications, icon: ICONS.immigrationGlobalVisas },
+          { title: 'E-Visa Applications', path: paths.dashboard.immigrationGvcEVisaApplications, icon: ICONS.immigrationEVisa },
+          { title: 'Visas & Service Fee Chart', path: paths.dashboard.immigrationGvcFeeChart, icon: ICONS.immigrationFeeChart },
+          { title: 'Embassy Files', path: paths.dashboard.immigrationGvcEmbassyFiles, icon: ICONS.immigrationEmbassyFiles },
+          { title: 'Deleted', path: paths.dashboard.immigrationGvcDeleted, icon: ICONS.immigrationDeleted },
+        ],
+      },
+      {
+        title: 'Applications Management',
+        path: paths.dashboard.immigrationApplicationsManagement,
+        icon: ICONS.immigrationApps,
+        children: [
+          { title: 'Individual Applications', path: paths.dashboard.immigrationAppsIndividual, icon: ICONS.individual },
+          {
+            title: 'Company Applications',
+            path: paths.dashboard.immigrationAppsCompany,
+            icon: ICONS.company,
+            children: [
+              { title: 'Active Application', path: paths.dashboard.immigrationAppsCompanyActive, icon: ICONS.active },
+              { title: 'Open Application', path: paths.dashboard.immigrationAppsCompanyOpen, icon: ICONS.open },
+              { title: 'Completed Application', path: paths.dashboard.immigrationAppsCompanyCompleted, icon: ICONS.completed },
+            ],
+          },
+        ],
+      },
     ],
   },
   /**
@@ -44,7 +226,32 @@ export const navData = [
   {
     subheader: 'Relocation',
     items: [
-      { title: 'Relocation', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Property Management',
+        path: paths.dashboard.relocationPropertyManagement,
+        icon: ICONS.relocationProperty,
+        children: [
+          { title: 'Short Rental', path: paths.dashboard.relocationPropertyShortRental, icon: ICONS.shortRental },
+          { title: 'Long Term Rentals', path: paths.dashboard.relocationPropertyLongTermRentals, icon: ICONS.longTermRentals },
+          { title: 'Buy-Sell Properties', path: paths.dashboard.relocationPropertyBuySell, icon: ICONS.buySell },
+          { title: 'Approve Listings', path: paths.dashboard.relocationPropertyApproveListings, icon: ICONS.approveListings },
+          { title: 'Mortgage Applications', path: paths.dashboard.relocationPropertyMortgageApplications, icon: ICONS.mortgageApps },
+          { title: 'Deleted-Closed-Not Approved', path: paths.dashboard.relocationPropertyDeletedClosedNotApproved, icon: ICONS.deletedClosedNotApproved },
+        ],
+      },
+      {
+        title: 'Business Center',
+        path: paths.dashboard.relocationBusinessCenter,
+        icon: ICONS.relocationBusiness,
+        children: [
+          { title: 'List Business', path: paths.dashboard.relocationBusinessListBusiness, icon: ICONS.businessList },
+          { title: 'Available Listing', path: paths.dashboard.relocationBusinessAvailableListing, icon: ICONS.businessAvailable },
+          { title: 'Interest Shown', path: paths.dashboard.relocationBusinessInterestShown, icon: ICONS.businessInterest },
+          { title: 'Deals in Process', path: paths.dashboard.relocationBusinessDealsInProcess, icon: ICONS.businessDeals },
+          { title: 'Property Booker Profiles', path: paths.dashboard.relocationBusinessBookerProfiles, icon: ICONS.businessBookerProfiles },
+          { title: 'Deleted', path: paths.dashboard.relocationBusinessDeleted, icon: ICONS.businessDeleted },
+        ],
+      },
     ],
   },
   /**
@@ -53,7 +260,11 @@ export const navData = [
   {
     subheader: 'Man Power Solutions',
     items: [
-      { title: 'Man Power Solutions', path: paths.dashboard.root, icon: ICONS.blank },
+      { title: 'Job Seekers', path: paths.dashboard.manpowerJobSeekers, icon: ICONS.mpsJobSeekers },
+      { title: 'Job Announcements', path: paths.dashboard.manpowerJobAnnouncements, icon: ICONS.mpsJobAnnouncements },
+      { title: 'Bulk Job Offers', path: paths.dashboard.manpowerBulkJobOffers, icon: ICONS.mpsBulkOffers },
+      { title: 'Interest Shown', path: paths.dashboard.manpowerInterestShown, icon: ICONS.mpsInterest },
+      { title: 'Deleted', path: paths.dashboard.manpowerDeleted, icon: ICONS.mpsDeleted },
     ],
   },
   /**
@@ -62,7 +273,18 @@ export const navData = [
   {
     subheader: 'Employee',
     items: [
-      { title: 'Employee', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Employees Management',
+        path: paths.dashboard.employeesManagement,
+        icon: ICONS.employeesMgmt,
+        children: [
+          { title: 'Interns', path: paths.dashboard.employeesManagementInterns, icon: ICONS.interns },
+          { title: 'Active Employees', path: paths.dashboard.employeesManagementActive, icon: ICONS.active },
+          { title: 'Former Employees', path: paths.dashboard.employeesManagementFormer, icon: ICONS.former },
+        ],
+      },
+      { title: 'Employees Tasks', path: paths.dashboard.employeesTasks, icon: ICONS.employeesTasks },
+      { title: 'Daily Reports', path: paths.dashboard.employeesDailyReports, icon: ICONS.employeesReports },
     ],
   },
   /**
@@ -71,7 +293,16 @@ export const navData = [
   {
     subheader: 'Partners',
     items: [
-      { title: 'Partners', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Partner Management',
+        path: paths.dashboard.partnersManagement,
+        icon: ICONS.partnersMgmt,
+        children: [
+          { title: 'Industry Professionals', path: paths.dashboard.partnersManagementIndustryProfessionals, icon: ICONS.industryProfessionals },
+          { title: 'Service Providers', path: paths.dashboard.partnersManagementServiceProviders, icon: ICONS.serviceProviders },
+          { title: 'Former Partners', path: paths.dashboard.partnersManagementFormer, icon: ICONS.formerPartner },
+        ],
+      },
     ],
   },
   /**
