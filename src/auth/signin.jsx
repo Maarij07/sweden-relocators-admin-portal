@@ -159,7 +159,7 @@ export function AuthProvider({ children }) {
         user: { 
           id: '8864c717-587d-472a-929a-8e5f298024da-0',
           displayName: 'Demo User',
-          email: 'demo@minimals.cc',
+          email: 'info@swedenrelocators.se',
           role: 'admin',
           accessToken: token
         }, 
@@ -223,7 +223,7 @@ export function useMockedUser() {
   const user = {
     id: '8864c717-587d-472a-929a-8e5f298024da-0',
     displayName: 'Jaydon Frankie',
-    email: 'demo@minimals.cc',
+    email: 'info@swedenrelocators.se',
     photoURL: _mock.image.avatar(24),
     phoneNumber: _mock.phoneNumber(1),
     country: _mock.countryNames(1),
@@ -307,7 +307,7 @@ export function JwtSignInView() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const defaultValues = {
-    email: 'demo@minimals.cc',
+    email: 'info@swedenrelocators.se',
     password: '@2Minimal',
   };
 
@@ -394,7 +394,7 @@ export function JwtSignInView() {
       />
 
       <Alert severity="info" sx={{ mb: 3 }}>
-        Use <strong>{defaultValues.email}</strong>
+        Use <strong>info@swedenrelocators.se</strong>
         {' with password '}
         <strong>{defaultValues.password}</strong>
       </Alert>

@@ -60,17 +60,14 @@ export function NavUpgrade({ sx, ...other }) {
             noWrap
             sx={{ color: 'var(--layout-nav-text-disabled-color)' }}
           >
-            {user?.email}
+            info@swedenrelocators.se
           </Typography>
         </Box>
 
         <Button
           variant="contained"
-          href={paths.minimalStore}
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          Upgrade to Pro
+          Customer Support
         </Button>
       </Box>
     </Box>
@@ -155,7 +152,7 @@ export function UpgradeBlock({ sx, ...other }) {
         </Box>
 
         <Button variant="contained" size="small" color="warning">
-          Upgrade to Pro
+          Customer Support
         </Button>
       </Box>
     </Box>

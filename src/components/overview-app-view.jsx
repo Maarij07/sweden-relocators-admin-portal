@@ -13,16 +13,16 @@ import { svgColorClasses } from 'src/components/svg-color';
 
 import { useMockedUser } from 'src/auth/signin';
 
-import { AppWidget } from '../app-widget';
-import { AppWelcome } from '../app-welcome';
-import { AppFeatured } from '../app-featured';
-import { AppNewInvoice } from '../app-new-invoice';
-import { AppTopAuthors } from '../app-top-authors';
-import { AppTopRelated } from '../app-top-related';
-import { AppAreaInstalled } from '../app-area-installed';
-import { AppWidgetSummary } from '../app-widget-summary';
-import { AppCurrentDownload } from '../app-current-download';
-import { AppTopInstalledCountries } from '../app-top-installed-countries';
+import { AppWidget } from './dashboard-app/app-widget';
+import { AppWelcome } from './dashboard-app/app-welcome';
+import { AppFeatured } from './dashboard-app/app-featured';
+import { AppNewInvoice } from './dashboard-app/app-new-invoice';
+import { AppTopAuthors } from './dashboard-app/app-top-authors';
+import { AppTopRelated } from './dashboard-app/app-top-related';
+import { AppAreaInstalled } from './dashboard-app/app-area-installed';
+import { AppWidgetSummary } from './dashboard-app/app-widget-summary';
+import { AppCurrentDownload } from './dashboard-app/app-current-download';
+import { AppTopInstalledCountries } from './dashboard-app/app-top-installed-countries';
 
 // ----------------------------------------------------------------------
 
