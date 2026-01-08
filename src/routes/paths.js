@@ -111,5 +111,33 @@ export const paths = {
     employeesManagementInterns: '/employees/management/interns',
     employeesManagementActive: '/employees/management/active',
     employeesManagementFormer: '/employees/management/former',
-  },
-};
+     // Support & Agreements
+     supportServiceAgreements: '/support/service-agreements',
+     supportFeedbackReviews: '/support/feedback-reviews',
+     supportComplaintCenter: '/support/complaint-center',
+     supportTermsConditions: '/support/terms-conditions',
+     supportResourcesBolags: '/support/resources-bolags',
+     supportFAQs: '/support/faqs',
+     supportTutorialVideos: '/support/tutorial-videos',
+     supportAnnouncements: '/support/announcements',
+     // Tasks Manager
+     tasksManagerMyTasks: '/tasks/my-tasks-to-do',
+     tasksManagerAssigned: '/tasks/assigned-tasks',
+     tasksManagerDailyReports: '/tasks/daily-reports',
+     // Data & Permissions
+     dataCenter: '/data-permissions/data-center',
+     dataCenterFindIndividuals: '/data-permissions/data-center/find-individuals',
+     dataCenterFindCompanies: '/data-permissions/data-center/find-companies',
+     dataCenterCreateBackup: '/data-permissions/data-center/create-backup',
+     permissionCenter: '/data-permissions/permission-center',
+     // My Business
+     myBusinessSubscriptions: '/my-business/subscriptions',
+     // Admin Overview
+     adminRecordsCenter: '/admin/records-center',
+     adminRecordsCenterIndividuals: '/admin/records-center/individuals',
+     adminRecordsCenterCompanies: '/admin/records-center/companies',
+     adminRecordsCenterEmployees: '/admin/records-center/employees',
+     adminRecordsCenterPartners: '/admin/records-center/partners',
+     adminRecordsCenterApplications: '/admin/records-center/applications',
+   },
+ };

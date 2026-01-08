@@ -78,10 +78,23 @@ const ICONS = {
   industryProfessionals: icon('ic-job'),
   serviceProviders: icon('ic-product'),
   formerPartner: icon('ic-disabled'),
+   supportService: icon('ic-file'),
+   supportFeedback: icon('ic-chat'),
+   supportComplaint: icon('ic-mail'),
+   supportTerms: icon('ic-file'),
+   supportResources: icon('ic-folder'),
+   supportFAQs: icon('ic-label'),
+   supportTutorial: icon('ic-course'),
+   supportAnnouncements: icon('ic-mail'),
+   taskMyTasks: icon('ic-kanban'),
+   taskAssigned: icon('ic-user'),
+   taskDailyReports: icon('ic-analytics'),
+   dataCenter: icon('ic-folder'),
+   findIndividuals: icon('ic-user'),
+   findCompanies: icon('ic-folder'),
+   createBackup: icon('ic-file'),
+   permissionCenter: icon('ic-lock'),
 };
-
-// ----------------------------------------------------------------------
-
 export const navData = [
   /**
    * Management
@@ -311,7 +324,14 @@ export const navData = [
   {
     subheader: 'Support & Agreements',
     items: [
-      { title: 'Support & Agreements', path: paths.dashboard.root, icon: ICONS.blank },
+      { title: 'Service Agreements', path: paths.dashboard.supportServiceAgreements, icon: ICONS.supportService },
+      { title: 'Feedback & Reviews', path: paths.dashboard.supportFeedbackReviews, icon: ICONS.supportFeedback },
+      { title: 'Complaint Center', path: paths.dashboard.supportComplaintCenter, icon: ICONS.supportComplaint },
+      { title: 'Terms & Conditions', path: paths.dashboard.supportTermsConditions, icon: ICONS.supportTerms },
+      { title: 'Resources & Bolags', path: paths.dashboard.supportResourcesBolags, icon: ICONS.supportResources },
+      { title: 'FAQs', path: paths.dashboard.supportFAQs, icon: ICONS.supportFAQs },
+      { title: 'Tutorial Videos', path: paths.dashboard.supportTutorialVideos, icon: ICONS.supportTutorial },
+      { title: 'Announcements', path: paths.dashboard.supportAnnouncements, icon: ICONS.supportAnnouncements },
     ],
   },
   /**
@@ -320,7 +340,9 @@ export const navData = [
   {
     subheader: 'Tasks Manager',
     items: [
-      { title: 'Tasks Manager', path: paths.dashboard.root, icon: ICONS.blank },
+      { title: 'My Tasks-To Do List', path: paths.dashboard.tasksManagerMyTasks, icon: ICONS.taskMyTasks },
+      { title: 'Assigned Tasks', path: paths.dashboard.tasksManagerAssigned, icon: ICONS.taskAssigned },
+      { title: 'Daily Reports', path: paths.dashboard.tasksManagerDailyReports, icon: ICONS.taskDailyReports },
     ],
   },
   /**
@@ -329,7 +351,17 @@ export const navData = [
   {
     subheader: 'Date & Permissions',
     items: [
-      { title: 'Date & Permissions', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Data Center',
+        path: paths.dashboard.dataCenter,
+        icon: ICONS.dataCenter,
+        children: [
+          { title: 'Find Individuals', path: paths.dashboard.dataCenterFindIndividuals, icon: ICONS.findIndividuals },
+          { title: 'Find Companies', path: paths.dashboard.dataCenterFindCompanies, icon: ICONS.findCompanies },
+          { title: 'Create Backup', path: paths.dashboard.dataCenterCreateBackup, icon: ICONS.createBackup },
+        ],
+      },
+      { title: 'Permission Center', path: paths.dashboard.permissionCenter, icon: ICONS.permissionCenter },
     ],
   },
   /**
@@ -338,7 +370,7 @@ export const navData = [
   {
     subheader: 'My Business',
     items: [
-      { title: 'My Business', path: paths.dashboard.root, icon: ICONS.blank },
+      { title: 'Subscriptions', path: paths.dashboard.myBusinessSubscriptions, icon: ICONS.subscription },
     ],
   },
   /**
@@ -347,7 +379,18 @@ export const navData = [
   {
     subheader: 'Admin Overview',
     items: [
-      { title: 'Admin Overview', path: paths.dashboard.root, icon: ICONS.blank },
+      {
+        title: 'Records Center',
+        path: paths.dashboard.adminRecordsCenter,
+        icon: ICONS.dataCenter,
+        children: [
+          { title: 'Individuals', path: paths.dashboard.adminRecordsCenterIndividuals, icon: ICONS.individual },
+          { title: 'Companies', path: paths.dashboard.adminRecordsCenterCompanies, icon: ICONS.company },
+          { title: 'Employees', path: paths.dashboard.adminRecordsCenterEmployees, icon: ICONS.employeesMgmt },
+          { title: 'Partners', path: paths.dashboard.adminRecordsCenterPartners, icon: ICONS.partnersMgmt },
+          { title: 'Applications', path: paths.dashboard.adminRecordsCenterApplications, icon: ICONS.immigrationApps },
+        ],
+      },
     ],
   },
 ];
